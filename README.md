@@ -1,7 +1,3 @@
 ## Hi there 👋
-
-<!--
-**Mediagrafos/Mediagrafos** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Esta es una propuesta de descripción técnica y breve para tu repositorio en GitHub, basada en las fuentes proporcionadas:
+propuesta de descripción técnica y breve para tu repositorio en GitHub:
 Plataforma de consultoría especializada en **mediación y resolución de conflictos** a través del análisis de la personalidad. Utilizamos el **Grafoanálisis Integrativo** como un test psicológico científico para descubrir aptitudes y motivaciones mediante el estudio de la escritura. Integramos herramientas como el **Eneagrama** y los Tipos Jungianos para comprender la dinámica estructural de la psique y los estados del Yo. Nuestro enfoque permite **armonizar intereses contrapuestos**, facilitando el diálogo y la entente cordial en ámbitos organizacionales y personales. Una solución técnica para la gestión de equipos y el desarrollo humano basada en una visión global del individuo.
