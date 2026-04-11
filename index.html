@@ -1,14 +1,6 @@
 <!doctype html>
 <html lang="es" itemscope itemtype="https://schema.org/WebPage">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X9D2P6VSVV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-X9D2P6VSVV');
-</script>
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -532,10 +524,129 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .contact-form-wrap { padding: 22px 18px; }
     }
   </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X9D2P6VSVV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X9D2P6VSVV');
+  </script>
+
+  <!-- ═══════════════════════════════════════════
+       BANNER COOKIES
+  ════════════════════════════════════════════ -->
+  <style>
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #1a2a3a;
+      color: #fff;
+      padding: 20px 30px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      z-index: 99999;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+    }
+    #cookie-banner p {
+      margin: 0;
+      flex: 1;
+      min-width: 250px;
+      line-height: 1.5;
+      color: #e2d9c8;
+    }
+    #cookie-banner a {
+      color: #c9a96e;
+      text-decoration: underline;
+    }
+    .cookie-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .cookie-btn-accept {
+      background: #c9a96e;
+      color: #1a2a3a;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+    .cookie-btn-accept:hover { background: #b8935a; }
+    .cookie-btn-reject {
+      background: transparent;
+      color: #e2d9c8;
+      border: 1px solid #e2d9c8;
+      padding: 10px 22px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+    .cookie-btn-reject:hover { background: rgba(255,255,255,0.1); }
+  </style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGSWMJ57"
+<!-- ═══ BANNER COOKIES ═══ -->
+  <div id="cookie-banner" style="display:none;">
+    <p>
+      🍪 Usamos cookies propias y de terceros (Google Analytics) para analizar el tráfico y mejorar tu experiencia. 
+      Puedes aceptarlas, rechazarlas o consultar nuestra 
+      <a href="#" onclick="return false;">Política de Cookies</a>.
+    </p>
+    <div class="cookie-buttons">
+      <button class="cookie-btn-reject" onclick="rechazarCookies()">Rechazar</button>
+      <button class="cookie-btn-accept" onclick="aceptarCookies()">Aceptar todas</button>
+    </div>
+  </div>
+
+  <script>
+    // Mostrar banner solo si no ha decidido antes
+    (function() {
+      var decision = localStorage.getItem('cookies_decision');
+      if (!decision) {
+        document.getElementById('cookie-banner').style.display = 'flex';
+      } else if (decision === 'aceptadas') {
+        activarAnalytics();
+      }
+    })();
+
+    function aceptarCookies() {
+      localStorage.setItem('cookies_decision', 'aceptadas');
+      document.getElementById('cookie-banner').style.display = 'none';
+      activarAnalytics();
+    }
+
+    function rechazarCookies() {
+      localStorage.setItem('cookies_decision', 'rechazadas');
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+    function activarAnalytics() {
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted'
+      });
+    }
+
+    // Por defecto Analytics en modo denegado hasta aceptar
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied'
+    });
+  </script>
+
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGSWMJ57"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
   <a href="#contenido" class="skip-link">Saltar al contenido</a>
